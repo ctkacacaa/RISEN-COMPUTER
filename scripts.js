@@ -28,7 +28,7 @@ buyButtons.forEach(button => {
     button.addEventListener('click', function() {
         const productName = this.parentElement.querySelector('h3').textContent;
         const productPrice = this.parentElement.querySelector('.price').textContent;
-        alert(`Terima kasih telah mengunjungi website kami. Saat ini, anda sedang mengunjungi rincian dari produk ${productName}!\nPrice: ${productPrice}\nA`);
+        alert(`Terima kasih telah mengunjungi website kami. Saat ini, anda sedang mengunjungi rincian dari produk ${productName}!\nPrice: ${productPrice}\n`);
     });
 });
 
