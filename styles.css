@@ -210,6 +210,7 @@ section {
     line-height: 1.8;
     margin-bottom: 2rem;
     font-weight: 300;
+     font-family: var(--font-body);
 }
 
 .about-stats {
