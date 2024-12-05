@@ -28,7 +28,13 @@ buyButtons.forEach(button => {
     button.addEventListener('click', function() {
         const productName = this.parentElement.querySelector('h3').textContent;
         const productPrice = this.parentElement.querySelector('.price').textContent;
-        alert(`Terima kasih telah mengunjungi website kami. Saat ini, anda sedang mengunjungi rincian dari produk ${productName}!\nPrice: ${productPrice}\n`);
+        
+        // Redirect to WhatsApp with a pre-filled message
+        const whatsappNumber = '+62 896-9333-1600';
+        const message = `Halo, saya tertarik untuk membeli ${productName} dengan harga ${productPrice}. Apakah tersedia?`;
+        const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
+        
+        window.open(whatsappUrl, '_blank');
     });
 });
 
